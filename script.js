@@ -11,12 +11,24 @@ function updateScore() {
     document.getElementById('wickets').textContent = `Wickets: ${wickets}`;
     document.getElementById('overs').textContent = `Overs: ${first}.${sec}`;
 }
+function weightedRandom() {
+    const random = Math.random();
+    if (random < 0.75) {
+      // 75% chance to generate a number between 0 to 5
+      return Math.floor(Math.random() * 6);
+    } else {
+      // 15% chance to generate 6
+      return 6;
+    }
+  }
+  
 
+  
 // Event listener for each button
 button.forEach(btn => {
     btn.addEventListener('click', (event) => {
         const buttonValue = parseInt(event.target.textContent);  // Convert the button value to a number
-        const randomNumber = Math.floor(Math.random() * 7);
+        const randomNumber = weightedRandom();
 
         // Check if button value matches the random number
         if (buttonValue === randomNumber) {
