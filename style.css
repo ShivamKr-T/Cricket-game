@@ -21,6 +21,8 @@ span {
 }
 
 body {
+    background-image: url("https://www.shutterstock.com/image-vector/night-cricket-stadium-illustration-vector-600nw-2160100275.jpg");
+    background-size: cover;
     height: 100vh;
     margin: 0;
     display: flex;
@@ -44,6 +46,7 @@ button {
     width: 200px;
     height: 80px;
     top: 400px;
+    left: 720px;
     border: 1px solid #000;
     text-align: center;
     line-height: 100px; /* centers text vertically */
